@@ -13,10 +13,10 @@
 <body>
 
 <br>
-<form action="showName" method="get">
+<form action="showName" method="POST">
     <label>
         <input type="text" name="employeeName" placeholder="write your name">
-        <input type="submit" >
+        <input type="submit">
     </label>
 
 </form>

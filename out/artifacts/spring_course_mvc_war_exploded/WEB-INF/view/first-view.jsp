@@ -3,8 +3,9 @@
 
 <!DOCTYPE html>
 <html>
-    <head></head>
-    <body>
-         <h2>My First View</h2>
-    </body>
+<head></head>
+<body>
+<h2>My First View</h2>
+<a href="askName" target="_blank">please click here for your name</a>
+</body>
 </html>

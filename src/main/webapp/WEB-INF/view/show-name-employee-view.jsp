@@ -6,15 +6,20 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <html>
 <head>
     <title>Title</title>
 </head>
 <body>
-<h1>Dear employee, YOu are welcome</h1>
+<h1>Dear employee, You are welcome</h1>
 <br>
 <br>
-<p>your name: ${param.employeeName}</p>
+<%--<p>your name: ${param.employeeName}</p>--%>
+<p>your name: ${empName}</p>
+
+<a href="<c:url value='/v1/'/>">Back to Home</a>
+
 
 </body>
 </html>

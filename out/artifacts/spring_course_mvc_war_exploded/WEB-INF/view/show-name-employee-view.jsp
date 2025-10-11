@@ -11,7 +11,7 @@
     <title>Title</title>
 </head>
 <body>
-<h1>Dear employee, YOu are welcome</h1>
+<h1>Dear employee, You are welcome</h1>
 <br>
 <br>
 <p>your name: ${param.employeeName}</p>
