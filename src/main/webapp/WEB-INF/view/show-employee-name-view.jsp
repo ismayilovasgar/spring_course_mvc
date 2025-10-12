@@ -13,13 +13,20 @@
 </head>
 <body>
 <h1>Dear employee, You are welcome</h1>
-<br>
-<br>
+
+<%--<br>--%>
 <%--<p>your name: ${param.employeeName}</p>--%>
-<p>your name: ${empName}</p>
-
-<a href="<c:url value='/v1/'/>">Back to Home</a>
-
-
+<%--<p>your name: ${empName}</p>--%>
+<%--<a href="<c:url value='/v1/'/>">Back to Home</a>--%>
+<%--<br>--%>
+<br>
+<h2>Your Name: ${employee.name}</h2>
+<br>
+<h2>Your Surname: ${employee.surname}</h2>
+<br>
+<h2>Your Salary: ${employee.salary}</h2>
+<br>
+<h2>Your Salary: ${employee.department}</h2>
+<br>
 </body>
 </html>
