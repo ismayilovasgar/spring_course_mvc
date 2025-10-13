@@ -28,13 +28,22 @@
     Surname: <form:input path="surname"/>
     <br>
     Salary: <form:input path="salary"/>
-    <br>
+    <br><br>
     Department:
     <form:select path="department">
-        <form:option value="Information Technology" label="IT"/>
-        <form:option value="Human Resources" label="HR"/>
-        <form:option value="Sales" label="Sales"/>
+        <%--        <form:option value="Information Technology" label="IT"/>--%>
+        <%--        <form:option value="Human Resources" label="HR"/>--%>
+        <%--        <form:option value="Sales" label="Sales"/>--%>
+
+        <form:options items="${employee.departments}"/>
     </form:select>
+    <br><br> 
+
+<%--    <form:radiobutton path="carBrand" value="BMW"/>BMW--%>
+<%--    <form:radiobutton path="carBrand" value="Audi"/>Audi--%>
+<%--    <form:radiobutton path="carBrand" value="Mercedes"/>Mercedes--%>
+
+    <form:radiobuttons path="carBrand" items="${employee.carBrands}"/>
     <br>
     <input type="submit" value="Ok">
 

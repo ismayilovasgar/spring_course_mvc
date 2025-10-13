@@ -55,7 +55,10 @@ public class MyController {
 
     @RequestMapping("/askDetail")
     public String askNameEmployee(Model model) {
-        Employee employee = new Employee("", "", 0, "");
+        Employee employee = new Employee();
+        employee.setName("ASGAR");
+        employee.setSalary(0);
+        employee.setSurname("ISMAYILOV");
         model.addAttribute("employee", employee);
         return "ask-employee-name-view";
     }

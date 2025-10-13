@@ -6,6 +6,6 @@
 <head></head>
 <body>
 <h2>My First View</h2>
-<a href="askDetail" target="_blank">please click here for your name</a>
+<a href="askDetail" >please click here for your name</a>
 </body>
 </html>

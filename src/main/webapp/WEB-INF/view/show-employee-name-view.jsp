@@ -26,7 +26,11 @@
 <br>
 <h2>Your Salary: ${employee.salary}</h2>
 <br>
-<h2>Your Salary: ${employee.department}</h2>
+<h2>Your Department: ${employee.department}</h2>
+<br>
+<%--<h2>Your Salary: ${employee.carBrand}</h2>--%>
+<br>
+<h2>Your carBrand: ${employee.carBrand}</h2>
 <br>
 </body>
 </html>
