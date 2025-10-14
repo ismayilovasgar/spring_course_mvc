@@ -31,6 +31,12 @@
 <%--<h2>Your Salary: ${employee.carBrand}</h2>--%>
 <br>
 <h2>Your carBrand: ${employee.carBrand}</h2>
+<h2>Foreign languages:</h2>
+<ul>
+    <c:forEach var="lang" items="${employee.languages}">
+        <li>${lang}</li>
+    </c:forEach>
+</ul>
 <br>
 </body>
 </html>

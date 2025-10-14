@@ -59,7 +59,9 @@ public class MyController {
         employee.setName("ASGAR");
         employee.setSalary(0);
         employee.setSurname("ISMAYILOV");
+        String[] languageOptions = {"English", "Russian", "Turkish"};
         model.addAttribute("employee", employee);
+        model.addAttribute("languageOptions", languageOptions);
         return "ask-employee-name-view";
     }
 

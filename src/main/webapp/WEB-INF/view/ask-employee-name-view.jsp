@@ -37,14 +37,21 @@
 
         <form:options items="${employee.departments}"/>
     </form:select>
-    <br><br> 
+    <br><br>
 
-<%--    <form:radiobutton path="carBrand" value="BMW"/>BMW--%>
-<%--    <form:radiobutton path="carBrand" value="Audi"/>Audi--%>
-<%--    <form:radiobutton path="carBrand" value="Mercedes"/>Mercedes--%>
+    <%--    <form:radiobutton path="carBrand" value="BMW"/>BMW--%>
+    <%--    <form:radiobutton path="carBrand" value="Audi"/>Audi--%>
+    <%--    <form:radiobutton path="carBrand" value="Mercedes"/>Mercedes--%>
 
     <form:radiobuttons path="carBrand" items="${employee.carBrands}"/>
     <br>
+    <h3>Please choose language that you know </h3>
+<%--    <form:checkbox path="languages" value="English"/>EN--%>
+<%--    <form:checkbox path="languages" value="Russian"/>RU--%>
+<%--    <form:checkbox path="languages" value="Turkish"/>TR--%>
+    <form:checkboxes path="languages" items="${languageOptions}"/>
+
+    <br><br>
     <input type="submit" value="Ok">
 
 </form:form>
