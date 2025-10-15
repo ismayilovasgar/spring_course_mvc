@@ -3,12 +3,14 @@ package com.ismayilov.spring.mvc.controller;
 import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import javax.servlet.http.HttpServletRequest;
+import javax.validation.Valid;
 
 @Controller
 //@RequestMapping("/v1")
@@ -59,16 +61,22 @@ public class MyController {
         employee.setName("ASGAR");
         employee.setSalary(0);
         employee.setSurname("ISMAYILOV");
-        String[] languageOptions = {"English", "Russian", "Turkish"};
+//        String[] languageOptions = {"English", "Russian", "Turkish"};
         model.addAttribute("employee", employee);
-        model.addAttribute("languageOptions", languageOptions);
+//        model.addAttribute("languageOptions", languageOptions);
         return "ask-employee-name-view";
     }
 
 
     @RequestMapping("/showDetail")
-    public String showNameEmployee(@ModelAttribute("employee") Employee employee) {
-        return "show-employee-name-view";
+    public String showNameEmployee(
+            @Valid @ModelAttribute("employee") Employee employee,
+            BindingResult bindingResult
+    ) {
+        if (bindingResult.hasErrors())
+            return "ask-employee-name-view";
+        else
+            return "show-employee-name-view";
     }
 
 }

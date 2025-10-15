@@ -1,17 +1,26 @@
 package com.ismayilov.spring.mvc.controller;
 
+import javax.validation.constraints.*;
 import java.util.HashMap;
 import java.util.Map;
 
 public class Employee {
+    @Size(min = 2, message = "minimum 2 symbols")
+    @Size(max = 2, message = "maximum 8 symbols")
     private String name;
+
+    @NotNull(message = "@NotNull validation")
+//    @NotEmpty(message = "@NotEmpty validation")
+//    @NotBlank(message = "@NotBlank validation")
     private String surname;
+    @Min(value = 300,message = "great than 300")
+    @Max(value = 5000,message = "least than 500")
     private int salary;
     private String department;
     private Map<String, String> departments;
     private String carBrand;
     private Map<String, String> carBrands;
-    private String[] languages;
+    private String[] languages = new String[]{"English"};
 
     public Employee() {
         departments = new HashMap<>();
@@ -24,7 +33,7 @@ public class Employee {
         carBrands.put("Audi", "Audi");
         carBrands.put("Mercedes", "Mercedes");
 
-        languages = new String[]{};
+//        languages = new String[]{"English"};
     }
 
 

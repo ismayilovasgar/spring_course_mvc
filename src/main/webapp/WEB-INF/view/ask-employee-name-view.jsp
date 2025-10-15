@@ -24,10 +24,13 @@
 <form:form action="showDetail" modelAttribute="employee">
 
     Name: <form:input path="name"/>
+    <form:errors path="name"/>
     <br>
     Surname: <form:input path="surname"/>
+    <form:errors path="surname"/>
     <br>
     Salary: <form:input path="salary"/>
+    <form:errors path="salary"/>
     <br><br>
     Department:
     <form:select path="department">
@@ -46,10 +49,10 @@
     <form:radiobuttons path="carBrand" items="${employee.carBrands}"/>
     <br>
     <h3>Please choose language that you know </h3>
-<%--    <form:checkbox path="languages" value="English"/>EN--%>
-<%--    <form:checkbox path="languages" value="Russian"/>RU--%>
-<%--    <form:checkbox path="languages" value="Turkish"/>TR--%>
-    <form:checkboxes path="languages" items="${languageOptions}"/>
+        <form:checkbox path="languages" value="English"/>EN
+        <form:checkbox path="languages" value="Russian"/>RU
+        <form:checkbox path="languages" value="Turkish"/>TR
+<%--    <form:checkboxes path="languages" items="${languageOptions}"/>--%>
 
     <br><br>
     <input type="submit" value="Ok">
