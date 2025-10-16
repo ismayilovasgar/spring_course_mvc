@@ -6,16 +6,24 @@ import java.util.Map;
 
 public class Employee {
     @Size(min = 2, message = "minimum 2 symbols")
-    @Size(max = 2, message = "maximum 8 symbols")
+    @Size(max = 8, message = "maximum 8 symbols")
     private String name;
 
     @NotNull(message = "@NotNull validation")
 //    @NotEmpty(message = "@NotEmpty validation")
 //    @NotBlank(message = "@NotBlank validation")
     private String surname;
-    @Min(value = 300,message = "great than 300")
-    @Max(value = 5000,message = "least than 500")
+    @Min(value = 300, message = "great than 300")
+    @Max(value = 5000, message = "least than 500")
     private int salary;
+
+    //* \\
+    @Pattern(
+            regexp = "\\d{3}-\\d{3}-\\d{2}-\\d{2}",
+            message = "Please use pattern XXX-XX-XX"
+    )
+    private String phoneNumber;
+    private String email;
     private String department;
     private Map<String, String> departments;
     private String carBrand;
@@ -36,6 +44,13 @@ public class Employee {
 //        languages = new String[]{"English"};
     }
 
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
 
     public String getName() {
         return name;
@@ -59,6 +74,14 @@ public class Employee {
 
     public void setSalary(int salary) {
         this.salary = salary;
+    }
+
+    public String getPhoneNumber() {
+        return phoneNumber;
+    }
+
+    public void setPhoneNumber(String phoneNumber) {
+        this.phoneNumber = phoneNumber;
     }
 
     public String getDepartment() {

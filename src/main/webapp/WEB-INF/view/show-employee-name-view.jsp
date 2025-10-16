@@ -26,11 +26,15 @@
 <br>
 <h2>Your Salary: ${employee.salary}</h2>
 <br>
+<h2>Your Phone Number: ${employee.phoneNumber}</h2>
+<br>
 <h2>Your Department: ${employee.department}</h2>
 <br>
 <%--<h2>Your Salary: ${employee.carBrand}</h2>--%>
 <br>
 <h2>Your carBrand: ${employee.carBrand}</h2>
+<br>
+<h2>Your Email: ${employee.email}</h2>
 <h2>Foreign languages:</h2>
 <ul>
     <c:forEach var="lang" items="${employee.languages}">

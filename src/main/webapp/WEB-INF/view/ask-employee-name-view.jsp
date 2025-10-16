@@ -31,7 +31,13 @@
     <br>
     Salary: <form:input path="salary"/>
     <form:errors path="salary"/>
-    <br><br>
+    <br>
+    Email: <form:input path="email"/>
+    <form:errors path="email"/>
+    <br>
+    Phone Number: <form:input path="phoneNumber"/>
+    <form:errors path="phoneNumber"/>
+    <br>
     Department:
     <form:select path="department">
         <%--        <form:option value="Information Technology" label="IT"/>--%>
@@ -49,10 +55,10 @@
     <form:radiobuttons path="carBrand" items="${employee.carBrands}"/>
     <br>
     <h3>Please choose language that you know </h3>
-        <form:checkbox path="languages" value="English"/>EN
-        <form:checkbox path="languages" value="Russian"/>RU
-        <form:checkbox path="languages" value="Turkish"/>TR
-<%--    <form:checkboxes path="languages" items="${languageOptions}"/>--%>
+    <form:checkbox path="languages" value="English"/>EN
+    <form:checkbox path="languages" value="Russian"/>RU
+    <form:checkbox path="languages" value="Turkish"/>TR
+    <%--    <form:checkboxes path="languages" items="${languageOptions}"/>--%>
 
     <br><br>
     <input type="submit" value="Ok">
