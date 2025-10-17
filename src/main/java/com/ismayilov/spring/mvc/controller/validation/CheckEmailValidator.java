@@ -8,10 +8,11 @@ public class CheckEmailValidator implements ConstraintValidator<CheckEmail, Stri
 
     @Override
     public void initialize(CheckEmail checkEmail) {
+        endOfMail = checkEmail.value();
     }
 
     @Override
-    public boolean isValid(String s, ConstraintValidatorContext constraintValidatorContext) {
-        return false;
+    public boolean isValid(String enteredEmail, ConstraintValidatorContext constraintValidatorContext) {
+        return enteredEmail.endsWith(endOfMail);
     }
 }

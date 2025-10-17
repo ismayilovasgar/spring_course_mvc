@@ -1,5 +1,7 @@
 package com.ismayilov.spring.mvc.controller;
 
+import com.ismayilov.spring.mvc.controller.validation.CheckEmail;
+
 import javax.validation.constraints.*;
 import java.util.HashMap;
 import java.util.Map;
@@ -23,6 +25,8 @@ public class Employee {
             message = "Please use pattern XXX-XX-XX"
     )
     private String phoneNumber;
+
+    @CheckEmail(value = "@test.com", message = "email must be ends with @test.com")
     private String email;
     private String department;
     private Map<String, String> departments;
